@@ -1,0 +1,50 @@
+.#{$namespace}-main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.#{$namespace}-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $nav-height;
+  padding: 0 spaces('smallest');
+
+  @include min-screen(mq('laptop')) {
+    height: $nav-height-desktop;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  &__link {
+    color: color('white');
+    opacity: 0.3;
+    transition: opacity 200ms ease-in-out;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+}
+
+.#{$namespace}-exchange-comparator {
+  margin-top: $nav-height;
+  align-self: stretch;
+  flex: 100%;
+
+  @include min-screen(mq('laptop')) {
+    display: flex;
+    margin-top: $nav-height-desktop;
+  }
+}

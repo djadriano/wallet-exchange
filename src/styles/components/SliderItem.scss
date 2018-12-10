@@ -1,0 +1,49 @@
+.#{$namespace}-slider-item {
+  padding: spaces('small');
+
+  @include min-screen(mq('laptop')) {
+    padding: spaces('medium');
+  }
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  &__title,
+  &__values {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 100%;
+    margin-bottom: spaces('smallest');
+    color: color('white');
+    font-size: fs('big');
+  }
+
+  &__values {
+    flex: 50%;
+    color: color('gray');
+    font-size: fs('small');
+
+    &:nth-child(3n) {
+      text-align: right;
+    }
+  }
+
+  &__field {
+    background: color('transparent');
+    font-size: fs('big');
+    color: color('white');
+    border: 0;
+    text-align: right;
+    outline: 0;
+    width: 15rem;
+  }
+}

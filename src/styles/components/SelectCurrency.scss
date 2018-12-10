@@ -1,0 +1,11 @@
+.#{$namespace}-select-currency {
+  @include appearance;
+
+  border: 1px solid color('white');
+  background: color('blue-heavy');
+  font-size: fs('medium');
+  color: color('white');
+  text-align: center;
+  padding: spaces('little');
+  border-radius: 0.6rem;
+}

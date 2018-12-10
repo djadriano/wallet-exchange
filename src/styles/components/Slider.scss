@@ -1,0 +1,38 @@
+.#{$namespace}-slider {
+  height: 50%;
+  position: relative;
+
+  &--to {
+    background: color('blue-heavy');
+
+    &:before {
+      @include triangle('bottom');
+
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include min-screen(mq('laptop')) {
+        @include triangle('right');
+
+        left: 0;
+        top: 50%;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .swiper-pagination {
+    bottom: spaces('small');
+  }
+
+  .swiper-pagination-bullet {
+    background: color('white');
+    transition: opacity 200ms ease-in-out;
+  }
+
+  @include min-screen(mq('laptop')) {
+    height: 100%;
+    width: 50%;
+  }
+}

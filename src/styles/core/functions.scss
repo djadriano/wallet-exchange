@@ -1,0 +1,15 @@
+@function mq($mq-value) {
+  @return map-get($mq, $mq-value);
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function spaces($spaces-name) {
+  @return map-get($spaces, $spaces-name);
+}
+
+@function fs($font-name) {
+  @return map-get($font-sizes, $font-name);
+}

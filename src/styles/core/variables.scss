@@ -1,0 +1,48 @@
+// Media Queries
+// ----------------------------------------------------------
+
+$mq: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'laptop': 1024px,
+  'desktop': 1440px
+);
+
+// Guide Colors
+// ----------------------------------------------------------
+
+$colors: (
+  'white': #fff,
+  'blue': #0075eb,
+  'blue-heavy': #0762bf,
+  'gray': #ccc,
+  'transparent': transparent
+);
+
+// Spaces
+// ----------------------------------------------------------
+
+$spaces: (
+  'little': 0.5rem,
+  'smallest': 2rem,
+  'small': 3rem,
+  'medium': 4rem,
+  'big': 6rem
+);
+
+// Font sizes
+// ----------------------------------------------------------
+
+$font-sizes: (
+  'small': 1.2rem,
+  'medium': 1.6rem,
+  'big': 4rem
+);
+
+// Default variables
+// ----------------------------------------------------------
+
+$base-font-size: 62.5%;
+$namespace: 'wexg';
+$nav-height: 6rem;
+$nav-height-desktop: 10rem;
