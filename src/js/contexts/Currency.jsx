@@ -1,3 +1,4 @@
+/* eslint-disable compat/compat */
 import React, { PureComponent, createContext } from 'react';
 import PropTypes from 'prop-types';
 
@@ -37,6 +38,12 @@ class CurrencyProvider extends PureComponent {
         symbol: '$',
         value: 0,
         wallet: 25.5
+      },
+      {
+        name: 'BRL',
+        symbol: 'R$',
+        value: 0,
+        wallet: 1
       }
     ],
     exchangeFromCompareValue: '',
