@@ -28,5 +28,8 @@
     "editor.formatOnSave": false
   },
   "prettier.stylelintIntegration": true,
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }

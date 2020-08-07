@@ -1,5 +1,5 @@
 const { resolve } = require('path');
-const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -32,19 +32,11 @@ module.exports = {
     ]
   },
   optimization: {
-    minimizer: [
-      new UglifyJsWebpackPlugin({
-        uglifyOptions: {
-          safari10: true
-        }
-      })
-    ]
+    minimize: true,
+    minimizer: [new TerserPlugin()]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
-      root: resolvePathName('../'),
-      allowExternal: true
-    }),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'styles-[hash].css',
       chunkFilename: '[name]-[id].css'
